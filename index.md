@@ -10,8 +10,8 @@ Therefore, we made several modifications on **'MuseGAN'** project to make it see
 1. Traspose all songs to C Major/A minor scale
 
 ## Demo
-[Demo1](https://soundcloud.com/user-156620916/ai-loops-draft-1)
-
+- [64 eight bar loops](https://soundcloud.com/user-156620916/ai-loops-draft-1)
+- [mp3](DAC_Epoch5.mp3)
 
 ```markdown
 Syntax highlighted code block
