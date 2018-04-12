@@ -10,7 +10,7 @@ Therefore, we made several modifications on **'MuseGAN'** project to make it see
 1. Traspose all songs to C Major/A minor scale
 
 ## Demo
-![](/DAC_Epoch5.mp3)
+![](DAC_Epoch5.mp3)
 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
