@@ -10,10 +10,8 @@ Therefore, we made several modifications on **'MuseGAN'** project to make it see
 1. Traspose all songs to C Major/A minor scale
 
 ## Demo
-![](DAC_Epoch5.mp3)
+[Demo1](https://soundcloud.com/user-156620916/ai-loops-draft-1)
 
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
