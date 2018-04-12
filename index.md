@@ -1,6 +1,6 @@
 ## Introduction
 
-Lead sheet is a widely used form of musical notation, especially in pop songs. It is constituted with melody, harmony (chord) and lyrics. Among several different ways taken by professional composers in writing songs, composing melody based on some chord progression or motif loops is a well-known approach.
+Lead sheet is a widely used form of musical notation, especially in pop songs. It is constituted with melody, harmony (chord) and lyrics. Among several different ways taken by professional composers in writing songs, composing melody based on some chord progression or motif loops is an often used approach.
 
 Therefore, we made several modifications on **'MuseGAN'** project to make it seems like a loop generator. The code could be found in [LeadsheetLoop Github](https://github.com/liuhaumin/LeadsheetLoop) (under construction)
 
