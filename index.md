@@ -1,10 +1,10 @@
-## Hao-Min Liu (Paul)
+## Introduction
 
-You can use the [editor on GitHub](https://github.com/liuhaumin/liuhaumin.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Lead sheet is a widely used form of music notation, especially in pop songs. It is constituted with melody, harmony (chord) and lyrics. Among several different ways taken by professional composers in writing songs, composing melody based on some chord progression or motif loops is a well-known approach.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Therefore, we made several modifications on **'MuseGAN'** project to make it seems like a loop generator. The code could be found in [LeadsheetLoop Github](https://github.com/liuhaumin/LeadsheetLoop) (under construction)
 
-### Markdown
+## Demo
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
