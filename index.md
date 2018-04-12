@@ -4,6 +4,11 @@ Lead sheet is a widely used form of music notation, especially in pop songs. It 
 
 Therefore, we made several modifications on **'MuseGAN'** project to make it seems like a loop generator. The code could be found in [LeadsheetLoop Github](https://github.com/liuhaumin/LeadsheetLoop) (under construction)
 
+## Data Set
+1. Theorytab Dataset
+1. Total 138,792 Four-Four Time bars
+1. Traspose all songs to C Major/A minor scale
+
 ## Demo
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
