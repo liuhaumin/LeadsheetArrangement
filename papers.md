@@ -15,6 +15,6 @@ to appear in *International Conference on Machine Learning and Applications* (IC
 Hao-Min Liu, Hao-Wen Dong, Wen-Yi Hsiao and Yi-Hsuan Yang,
 "Lead sheet and Multi-track Piano-roll generation using MuseGAN,"
 in *GPU Technology Conference* (GTC), 2018.
-[[poster](https://github.com/liuhaumin/LeadsheetArrangement/blob/master/pdf/2018_arxiv.pdf)]
+[[poster](https://paul115236.github.io/LeadsheetArrangement/pdf/GTC_poster_HaoMin.pdf)]
 
 \* *These authors contributed equally to this work.*
