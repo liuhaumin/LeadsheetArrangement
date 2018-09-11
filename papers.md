@@ -1,4 +1,4 @@
-# Papers
+# Papers & Posters
 
 Hao-Min Liu\*, Meng-Hsuan Wu\* and Yi-Hsuan Yang,
 "Lead Sheet Generation and Arrangement via A Hybrid Generative Model,"
