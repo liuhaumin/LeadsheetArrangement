@@ -1,13 +1,22 @@
 # Results
 
 ## Lead Sheet Generation Demo
-### Recurrent VAE version
-{% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 ### Convolutional GAN version
-{% include audio_player.html filename="best_samples.mp3" %}
+sample1 {% include audio_player.html filename="gan_sample1.mp3" %}
+sample2 {% include audio_player.html filename="gan_sample2.mp3" %}
+sample3 {% include audio_player.html filename="gan_sample3.mp3" %}
+sample4 {% include audio_player.html filename="gan_sample4.mp3" %}
+sample5 {% include audio_player.html filename="gan_sample5.mp3" %}
+sample6 {% include audio_player.html filename="gan_sample6.mp3" %}
+
+### Recurrent VAE version
+sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
+
+interpolation of two famous songs: from "Hey Jude" to "Some one like you"
+{% include audio_player.html filename="jude2some_4barvae.mp3" %}
+
 
 ## Arrangement Generation Demo
-No cherry-picking involved for all models. Some might sound unpleasant.
 
 | Model          | Sample1 |
 |:--------------:|:-------:|
