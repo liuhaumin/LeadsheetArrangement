@@ -52,9 +52,6 @@ sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 
 ## Arrangement Visualizations
+{% include audio_player.html filename="amazing_grace_arr.mp3" %}
 ![arrangement](figs/Amazing_grace_arrangement.png)
 <p class="caption">The music sheet of Amazing grace arrangement</p>
-
-
-![evolution](figs/evolution.png)
-<p class="caption">Evolution of the generated piano-rolls as a function of update steps</p>
