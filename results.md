@@ -2,7 +2,7 @@
 
 ## Lead Sheet Generation Demo
 ### Recurrent VAE version
-{% include audio_player.html filename="best_samples.mp3" %}
+{% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 ### Convolutional GAN version
 {% include audio_player.html filename="best_samples.mp3" %}
 
