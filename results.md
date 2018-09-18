@@ -12,7 +12,7 @@ sample6 {% include audio_player.html filename="gan_sample6.mp3" %}
 ### Recurrent VAE version
 sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
-interpolation of two famous songs: from "Hey Jude" to "Some one like you"
+#### interpolation of two famous songs: from "Hey Jude" to "Some one like you"
 {% include audio_player.html filename="jude2some_4barvae.mp3" %}
 
 
