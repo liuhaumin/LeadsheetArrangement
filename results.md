@@ -1,5 +1,4 @@
 # Results
-> **Lower the volume first!**
 ## Lead Sheet Generation Demo
 ### Convolutional GAN version
 sample1 {% include audio_player.html filename="gan_sample1.mp3" %}
@@ -52,7 +51,7 @@ sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 
 ## Arrangement Visualizations
-![arrangement](figs/Amazing_grace_arrangment.png)
+![arrangement](figs/Amazing_grace_arrangement.png)
 <p class="caption">The music sheet of Amazing grace arrangement</p>
 
 
