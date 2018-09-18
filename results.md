@@ -20,27 +20,31 @@ sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 | Model          | Sample1 |
 |:--------------:|:-------:|
+| *chord-roll*   | {% include audio_player.html filename="sample1_chord_roll.mp3" %} |
 | *chroma-roll*  | {% include audio_player.html filename="sample1_chroma_roll.mp3" %} |
 | *chroma-beats* | {% include audio_player.html filename="sample1_chroma_beats.mp3" %} |
-| *chord-roll*   | {% include audio_player.html filename="sample1_chord_roll.mp3" %} |
+
 
 | Model          | Sample2 |
 |:--------------:|:-------:|
+| *chord-roll*   | {% include audio_player.html filename="sample2_chord_roll.mp3" %} |
 | *chroma-roll*  | {% include audio_player.html filename="sample2_chroma_roll.mp3" %} |
 | *chroma-beats* | {% include audio_player.html filename="sample2_chroma_beats.mp3" %} |
-| *chord-roll*   | {% include audio_player.html filename="sample2_chord_roll.mp3" %} |
+
 
 | Model          | Sample3 |
 |:--------------:|:-------:|
+| *chord-roll*   | {% include audio_player.html filename="sample3_chord_roll.mp3" %} |
 | *chroma-roll*  | {% include audio_player.html filename="sample3_chroma_roll.mp3" %} |
 | *chroma-beats* | {% include audio_player.html filename="sample3_chroma_beats.mp3" %} |
-| *chord-roll*   | {% include audio_player.html filename="sample3_chord_roll.mp3" %} |
+
 
 | Model          | Sample4 |
 |:--------------:|:-------:|
+| *chord-roll*   | {% include audio_player.html filename="sample4_chord_roll.mp3" %} |
 | *chroma-roll*  | {% include audio_player.html filename="sample4_chroma_roll.mp3" %} |
 | *chroma-beats* | {% include audio_player.html filename="sample4_chroma_beats.mp3" %} |
-| *chord-roll*   | {% include audio_player.html filename="sample4_chord_roll.mp3" %} |
+
 
 
 ## Piano-roll Visualizations
