@@ -1,5 +1,5 @@
 # Results
-
+> **Lower the volume first!**
 ## Lead Sheet Generation Demo
 ### Convolutional GAN version
 sample1 {% include audio_player.html filename="gan_sample1.mp3" %}
@@ -13,6 +13,10 @@ sample6 {% include audio_player.html filename="gan_sample6.mp3" %}
 sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 #### interpolation of two famous songs: from "Hey Jude" to "Some one like you"
+
+![interp](figs/interpolation.png)
+<p class="caption">interpolate between two pop songs</p>
+
 {% include audio_player.html filename="jude2some_4barvae.mp3" %}
 
 
@@ -47,33 +51,10 @@ sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 
 
-## Piano-roll Visualizations
+## Arrangement Visualizations
+![arrangement](figs/Amazing_grace_arrangment.png)
+<p class="caption">The music sheet of Amazing grace arrangement</p>
+
 
 ![evolution](figs/evolution.png)
 <p class="caption">Evolution of the generated piano-rolls as a function of update steps</p>
-
-![hybrid](figs/hybrid.png)
-<p class="caption">Randomly-picked generation result (piano-rolls), generating from scratch</p>
-
-## Generation From Scratch
-
-> **Lower the volume first!**
-No cherry-picking involved for all models. Some might sound unpleasant.
-
-| Model      | Sample |
-|:----------:|:-------:|
-| *composer* | {% include audio_player.html filename="from_scratch_composer.mp3" %} |
-| *jamming*  | {% include audio_player.html filename="from_scratch_jamming.mp3" %} |
-| *hybrid*   | {% include audio_player.html filename="from_scratch_hybrid.mp3" %} |
-
-## Track-conditional Generation
-
-> **Lower the volume first!**
-No cherry-picking involved for all models. Some might sound unpleasant.
-
-| Model      | Sample |
-|:----------:|:------:|
-| *composer* | {% include audio_player.html filename="track_conditional_composer.mp3" %} |
-| *jamming*  | {% include audio_player.html filename="track_conditional_jamming.mp3" %} |
-| *hybrid*   | {% include audio_player.html filename="track_conditional_hybrid.mp3" %} |
-
