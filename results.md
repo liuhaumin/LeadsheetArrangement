@@ -19,9 +19,8 @@ sample {% include audio_player.html filename="vae_8bar_samples.mp3" %}
 **from "Hey Jude" to "Some one like you"**
 {% include audio_player.html filename="jude2some_4barvae.mp3" %}
 **from "Payphone" to "Hey Jude"**
-![interp](figs/interpolation.png)
 {% include audio_player.html filename="phone2jude_4barvae.mp3" %}
-
+![interp](figs/interpolation.png)
 
 
 ## Arrangement Generation Demo
