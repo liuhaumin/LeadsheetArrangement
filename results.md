@@ -56,8 +56,7 @@ sample {% include audio_player.html filename="vae_8bar_samples.mp3" %}
 <p class="caption">Arrangement on VAE generated leadsheets</p>
 {% include audio_player.html filename="vae_arr_4bar_samples.mp3" %}
 
-## Arrangement visualization
+<p class="caption">Arrangement on **Amazing grace leadsheet**</p>
 {% include audio_player.html filename="amazing_grace_arr.mp3" %}
-<p class="caption">The music sheet of Amazing grace arrangement</p>
 ![arrangement](figs/Amazing_grace_arrangement.png)
 
