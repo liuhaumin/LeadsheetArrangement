@@ -1,0 +1,6 @@
+model_checkpoint_path: "midinet-7400"
+all_model_checkpoint_paths: "midinet-7000"
+all_model_checkpoint_paths: "midinet-7100"
+all_model_checkpoint_paths: "midinet-7200"
+all_model_checkpoint_paths: "midinet-7300"
+all_model_checkpoint_paths: "midinet-7400"
