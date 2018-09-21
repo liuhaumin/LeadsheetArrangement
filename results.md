@@ -9,7 +9,11 @@ sample5 {% include audio_player.html filename="gan_sample5.mp3" %}
 sample6 {% include audio_player.html filename="gan_sample6.mp3" %}
 
 ### Recurrent VAE version
-sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
+<p class="caption">vae 4-bar samples</p>
+sample {% include audio_player.html filename="vae_4bar_samples.mp3" %}
+
+<p class="caption">vae 8-bar samples</p>
+sample {% include audio_player.html filename="vae_8bar_samples.mp3" %}
 
 #### interpolation of two pop songs
 **from "Hey Jude" to "Some one like you"**
@@ -22,6 +26,7 @@ sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 ## Arrangement Generation Demo
 
+<p class="caption">Arrangement on theorytab leadsheets</p>
 | Model          | Sample1 |
 |:--------------:|:-------:|
 | *chord-roll*   | {% include audio_player.html filename="sample1_chord_roll.mp3" %} |
@@ -49,9 +54,10 @@ sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 | *chroma-roll*  | {% include audio_player.html filename="sample4_chroma_roll.mp3" %} |
 | *chroma-beats* | {% include audio_player.html filename="sample4_chroma_beats.mp3" %} |
 
+<p class="caption">Arrangement on VAE generated leadsheets</p>
+{% include audio_player.html filename="vae_arr_4bar_samples.mp3" %}
 
-
-## Arrangement Visualizations
+## Arrangement visualization
 {% include audio_player.html filename="amazing_grace_arr.mp3" %}
 <p class="caption">The music sheet of Amazing grace arrangement</p>
 ![arrangement](figs/Amazing_grace_arrangement.png)
