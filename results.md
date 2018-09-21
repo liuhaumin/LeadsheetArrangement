@@ -25,8 +25,8 @@ sample {% include audio_player.html filename="vae_8bar_samples.mp3" %}
 
 
 ## Arrangement Generation Demo
-
 <p class="caption">Arrangement on theorytab leadsheets</p>
+
 | Model          | Sample1 |
 |:--------------:|:-------:|
 | *chord-roll*   | {% include audio_player.html filename="sample1_chord_roll.mp3" %} |
