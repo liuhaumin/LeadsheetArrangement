@@ -12,12 +12,12 @@ sample6 {% include audio_player.html filename="gan_sample6.mp3" %}
 sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 #### interpolation of two pop songs
-**from "Payphone" to "Hey Jude"**
-![interp](figs/interpolation.png)
-<p class="caption">interpolate between two pop songs</p>
-{% include audio_player.html filename="phone2jude_4barvae.mp3" %}
 **from "Hey Jude" to "Some one like you"**
 {% include audio_player.html filename="jude2some_4barvae.mp3" %}
+**from "Payphone" to "Hey Jude"**
+![interp](figs/interpolation.png)
+{% include audio_player.html filename="phone2jude_4barvae.mp3" %}
+
 
 
 ## Arrangement Generation Demo
@@ -53,5 +53,6 @@ sample {% include audio_player.html filename="vae_TT_Random Sample8bar.mp3" %}
 
 ## Arrangement Visualizations
 {% include audio_player.html filename="amazing_grace_arr.mp3" %}
-![arrangement](figs/Amazing_grace_arrangement.png)
 <p class="caption">The music sheet of Amazing grace arrangement</p>
+![arrangement](figs/Amazing_grace_arrangement.png)
+
