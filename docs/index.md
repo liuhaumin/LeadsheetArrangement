@@ -9,11 +9,10 @@ Nowadays, the common ways people usually adopt for musical data storaging are ei
 
 ## Data Set
 1. Theorytab Dataset (lead sheet xml format)
-1. Total 138,792 Four-Four Time bars
-1. Traspose all songs to C Major/A minor scale
+  1. Total ~138K Four-Four Time bars
+  1. Scale degree (considered as C Major scale)
+1. Lakh Pianoroll Dataset (MIDI format)
+  1. Total ~160K Four-Four Time bars
+  1. Traspose all songs to C Major/A minor scale
 
-
-
-## Demo
-- [64 eight bar loops](https://soundcloud.com/user-156620916/ai-loops-draft-1)
-- [mp3](DAC_Epoch5.mp3)
+## Demos are shown in result page.
