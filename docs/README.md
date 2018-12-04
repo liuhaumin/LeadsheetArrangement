@@ -1,5 +1,5 @@
 # LeadsheetArrangement 自動簡譜編曲
-Lead sheet arrangement is a task to automatically accompany the existed or generated lead sheets with multiple instruments. The rhythm, pitch notes, onsets and even playing style of different instruments are all learned by the model. 
+[Lead Sheet Arrangement](https://liuhaumin.github.io/LeadsheetArrangement/) is a task to automatically accompany the existed or generated lead sheets with multiple instruments. The rhythm, pitch notes, onsets and even playing style of different instruments are all learned by the model. 
 
 We train the model with Lakh Pianoroll Dataset (LPD) to generate pop song style arrangement consisting of bass, guitar, piano, strings and drums.
 
