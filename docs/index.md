@@ -7,7 +7,7 @@ Nowadays, people commonly used XML format (ex. lead sheet) or MIDI format (multi
 
 [Lead sheet arrangement](https://liuhaumin.github.io/LeadsheetArrangement/) is a project which aims at solving a new task, which bridges the gap between lead sheet generation and multi-instrument generation. The challenge lies in the situation that lead sheet XML format provides melody information but lacks the performance of chord sequences while MIDI format provides all settings of the played note but seldom mark out where the melody track is. In these project, we try to extract harmonic features from both types of the dataset and link them together. In a nutshell, we want to create music **From Lead Sheet to its Arrangement**. The code could be found in [LeadsheetArrangement Github](https://github.com/liuhaumin/LeadsheetArrangement) (under construction)
 
-## Data Set
+## Datasets
 1. **Theorytab Dataset** (lead sheet xml format)
     1. Total ~138K Four-Four Time bars
     1. Scale degree (considered as C Major scale)
