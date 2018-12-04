@@ -1,16 +1,12 @@
 # Data
 
-## Lakh Pianoroll Dataset
+## Theorytab Dataset (lead sheet xml format)
+  1. Total ~138K Four-Four Time bars
+  1. Scale degree (considered as C Major scale)
 
-We use the *cleansed* version of
-[Lakh Pianoroll Dataset](https://salu133445.github.io/lakh-pianoroll-dataset/)
-(LPD). LPD contains 174,154 unique
-[multi-track piano-rolls](https://salu133445.github.io/lakh-pianoroll-dataset/representation)
-derived from the MIDI files in the
-[Lakh MIDI Dataset](http://colinraffel.com/projects/lmd/) (LMD),
-while the cleansed version contains 21,425 piano-rolls that
-are in 4/4 time and have been matched to distinct entries in
-[Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) (MSD).
+## [Lakh Pianoroll Dataset](https://salu133445.github.io/lakh-pianoroll-dataset/) (MIDI format)
+  1. Total ~160K Four-Four Time bars
+  1. Traspose all songs to C Major/A minor scale
 
 ## Training Data
 
