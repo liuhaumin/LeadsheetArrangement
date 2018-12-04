@@ -4,6 +4,7 @@
 - Eight-bar generation
 - Recurrent Convolutional GAN (RCNN GAN)
 - Pianoroll form for both melody and chord representation
+![leadsheetgan](figs/leadsheetgan_arch.pdf)
 
 ## Arrangement Generation
 - Conditional bar generation
