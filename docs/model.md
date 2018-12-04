@@ -4,8 +4,10 @@
 - Eight-bar generation
 - Recurrent Convolutional GAN (RCNN GAN)
 - Pianoroll form for both melody and chord representation
+
 ![leadsheetgan](figs/leadsheetgan_arch.png)
 <img src="figs/leadsheetgan_arch.png" alt="leadsheetgan" style="max-width:400px;">
+
 ## Arrangement Generation
 - Conditional bar generation
 - Convolutional Generative Adversarial Network (CNN GAN)
@@ -13,10 +15,19 @@
 - Conditional generation is done by a convolutional encoder to embed harmonic features
 - Five tracks for the arrangement: Strings, Piano, Guitar, Drum, Bass
 
+<img src="figs/generator_arch.png" alt="leadsheetarr" style="max-width:400px;">
+
+
 ## Symbolic-domain harmonic features
 - **Chroma pianoroll representation** compresses the pitch range into chroma, leading to a 12 x 48 matrix per bar.
 - **Chroma beats representation** further reduces the temporal resolution of chroma-roll by taking the average per beat, leading to a 12 x 4 matrix per bar.
 - **Chord pianoroll representation** applies an existing chord recognition model [4] for chord estimation to recognize major and minor chords for each beat and then uses a piano roll to represent the chords, yielding an 84 x 48 matrix per bar.
+
+## System Flow
+
+<img src="figs/system_flow.png" alt="systemflow" style="max-width:400px;">
+
+
 
 
 
