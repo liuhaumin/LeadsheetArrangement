@@ -27,7 +27,7 @@ in *GPU Technology Conference* (GTC), 2018.
 [[poster](https://liuhaumin.github.io/LeadsheetArrangement/pdf/GTC_poster_HaoMin.pdf)]
 
 ## Usage
-### Adjust training or testing modes in main.py
+### Step 1: adjust training or testing modes in main.py
 ```python
 import tensorflow as tf
 from musegan.core import MuseGAN
@@ -71,5 +71,5 @@ with tf.Session() as sess:
     musegan.gen_test(input_data, is_eval=True)
 
 ```
-### run store_sa.py
-### run main.py
+### Step 2: run store_sa.py
+### Step 3: run main.py
