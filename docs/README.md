@@ -6,12 +6,6 @@ We train the model with Lakh Pianoroll Dataset (LPD) to generate pop song style 
 Sample results are available
 [here](https://liuhaumin.github.io/LeadsheetArrangement/results).
 
-### Prepare training data
-
-> The training data is collected from
-[Lakh Pianoroll Dataset](https://salu133445.github.io/lakh-pianoroll-dataset/)
-(LPD), a new multitrack pianoroll dataset.
-
 ## Papers
 
 __Lead sheet generation and arrangement by conditional generative adversarial network__<br>
