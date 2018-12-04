@@ -35,25 +35,29 @@ from musegan.components import NowbarHybrid
 from config import *
 
 # Initialize a tensorflow session
-with tf.Session() as sess:
 
+""" Create TensorFlow Session """
+with tf.Session() as sess:
+    
     # === Prerequisites ===
-    # Step 1 - Initialize the training configuration
+    # Step 1 - Initialize the training configuration        
     t_config = TrainingConfig
+    t_config.exp_name = 'exps/nowbar_hybrid'        
 
     # Step 2 - Select the desired model
     model = NowbarHybrid(NowBarHybridConfig)
-
+    
     # Step 3 - Initialize the input data object
     input_data = InputDataNowBarHybrid(model)
-
+    
     # Step 4 - Load training data
-    path_train = 'train.npy'
-    input_data.add_data(path_train, key='train')
-
+    path_x_train_bar = 'tra_X_bars'
+    path_y_train_bar = 'tra_y_bars'
+    input_data.add_data_sa(path_x_train_bar, path_y_train_bar, 'train') # x: input, y: conditional feature
+    
     # Step 5 - Initialize a museGAN object
     musegan = MuseGAN(sess, t_config, model)
-
+    
     # === Training ===
     musegan.train(input_data)
 
@@ -61,7 +65,9 @@ with tf.Session() as sess:
     musegan.load(musegan.dir_ckpt)
 
     # === Generate Samples ===
-    path_test = 'train.npy'
-    input_data.add_data(path_test, key='test')
+    path_x_test_bar = 'val_X_bars'
+    path_y_test_bar = 'val_y_bars'
+    input_data.add_data_sa(path_x_test_bar, path_y_test_bar, key='test')
     musegan.gen_test(input_data, is_eval=True)
+
 ```
