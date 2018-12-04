@@ -5,7 +5,7 @@
 - Recurrent Convolutional GAN (RCNN GAN)
 - Pianoroll form for both melody and chord representation
 ![leadsheetgan](figs/leadsheetgan_arch.png)
-
+<img src="figs/leadsheetgan_arch.png" alt="leadsheetgan" style="max-width:400px;">
 ## Arrangement Generation
 - Conditional bar generation
 - Convolutional Generative Adversarial Network (CNN GAN)
