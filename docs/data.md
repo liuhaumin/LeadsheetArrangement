@@ -41,3 +41,4 @@ training data. The tracks are (from top to bottom): <i>Bass</i>, <i>Drums</i>,
    "Unsupervised Detection of Music Boundaries by Time Series Structure
    Features,"
    in *AAAI Conference on Artificial Intelligence* (AAAI), 2012
+   
