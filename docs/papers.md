@@ -3,7 +3,7 @@
 Hao-Min Liu\*, Meng-Hsuan Wu\* and Yi-Hsuan Yang,
 "Lead Sheet Generation and Arrangement via A Hybrid Generative Model,"
 to appear in *ISMIR Late-Breaking and Demo Session*, 2018.
-[[paper](https://liuhaumin.github.io/LeadsheetArrangement/pdf/ismir2018leadsheetarrangement.pdf)]
+[[paper](https://liuhaumin.github.io/LeadsheetArrangement/pdf/ismir-2018-leadsheet-arrangement.pdf)]
 [[poster](https://liuhaumin.github.io/LeadsheetArrangement/pdf/ismir-lbd-poster_A0_final.pdf)]
 
 Hao-Min Liu and Yi-Hsuan Yang,
