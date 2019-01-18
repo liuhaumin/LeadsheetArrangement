@@ -33,12 +33,12 @@ in *GPU Technology Conference* (GTC), 2018.
     * Note that song_name.midi should be in C key and two tracks(melody and chord)
 3. Back to folder (./preprocessing/)
 4. Run pianoroll_mysong.ipynb
-    * Remember to change the filenames in code lines into "song_name"
+    * Remember to change filenames in code lines into "song_name"
     * Output files will be stored in folder(./data/chord_roll/val/)with name as "x_bar_chroma_song_name.npy" and "y_bar_chroma_song_name.npy"
 
 ### Step 1: Loading the data
 1. Open file store_sa.py
-2. Turn the name in code line # 36 into your file name, i.e. ('y_bar_chroma_song_name.npy')
+2. Turn filename in code line # 36 into your filename, i.e. ('y_bar_chroma_song_name.npy')
 3. Load the data by running store_sa.py
 
 ### Step 2: adjust training or testing modes in main.py
@@ -87,11 +87,14 @@ with tf.Session() as sess:
 ```
 ### Step 3: run main.py
 1. Training mode
-   * Checkpoints are stored in folder (./exp/nowbar_hybrid/checkpoint/)
+   * Checkpoints are stored in folder (./exps/nowbar_hybrid/checkpoint/)
 2. Testing mode
-   * the output file are stored in folder (./exp/nowbar_hybrid/gen/)
+   * the output files are stored in folder (./exps/nowbar_hybrid/gen/)
    
 ### Step 4: postprocessing the output midi
-1. Run 
+1. Go to folder (./postprocessing/)
+2. Run file npy2mid.ipynb
+   * Remember to change filenames in code lines into "song_name"
+   * Output files are stored in folder (./exps/nowbar_hybrid/gen_4bar/)
 
 
