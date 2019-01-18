@@ -6,14 +6,15 @@ import os
 from sklearn.utils import shuffle
 
 
-
 def save_on_sa(data_dir, use_only_84_keys = True, rescale = True, postfix=''):
     print('Reading...')
     print('[*]',data_dir)
 
     ##data_prefix = ['Bass', 'Drum', 'Guitar', 'Other', 'Piano', 'Chord']
     ##data_prefix = ['mel_phr','acc_phr']
+    
     subdirs = ['tra', 'val']
+#    subdirs = ['val']
 
     for sd in subdirs:
         data = []
@@ -28,12 +29,22 @@ def save_on_sa(data_dir, use_only_84_keys = True, rescale = True, postfix=''):
         ##
         ##data_X = np.concatenate(data,axis = 3)
         
-        # midi setting
-        data_X = np.load(os.path.join(data_dir, sd, 'x_bar_chroma.npy'))
+        # midi setting for training
+#         data_X = np.load(os.path.join(data_dir, sd, 'x_bar_chroma.npy'))
+#         if sd is 'tra':
+#             data_y = np.load(os.path.join(data_dir, sd ,'y_bar_chroma.npy'))
+#         else:
+#             data_y = np.load(os.path.join(data_dir, sd ,'y_bar_chroma_humanlifeleadsheet.npy'))
+#             #data_y = np.load(os.path.join(data_dir, sd ,'y_bar_chroma.npy'))
+            
+            
+        # midi setting for testing
+        data_X = np.load(os.path.join(data_dir, 'val', 'x_bar_chroma.npy'))
         if sd is 'tra':
-            data_y = np.load(os.path.join(data_dir, sd ,'y_bar_chroma.npy'))
+            data_y = np.load(os.path.join(data_dir, 'val' ,'y_bar_chroma.npy'))
         else:
-            data_y = np.load(os.path.join(data_dir, sd ,'y_bar_chroma_8bar_vae.npy'))
+            data_y = np.load(os.path.join(data_dir, 'val' ,'y_bar_chroma_humanlifeleadsheet.npy'))
+            #data_y = np.load(os.path.join(data_dir, sd ,'y_bar_chroma.npy'))
 
         print(data_X.dtype)
         print(data_y.dtype)
@@ -63,4 +74,22 @@ if __name__ == '__main__':
     ##save_on_sa('./data_tab_4dbar_12', postfix='phrs')
     ##save_on_sa('./data/chroma_roll', postfix='bars')
     ##save_on_sa('./data/chroma_beat', postfix='bars')
+    print('try')
+    try:
+        sa.delete('tra_X_bars')
+    except:
+        print('error tra_X_bars')
+    try:
+        sa.delete('tra_y_bars')
+    except:
+        print('error tra_y_bars')
+    try:
+        sa.delete('val_X_bars')
+    except:
+        print('error val_X_bars')
+    try:
+        sa.delete('val_y_bars')
+    except:
+        print('error val_y_bars')
+    
     save_on_sa('./data/chord_roll', postfix='bars')
