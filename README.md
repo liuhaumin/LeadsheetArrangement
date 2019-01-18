@@ -27,7 +27,21 @@ in *GPU Technology Conference* (GTC), 2018.
 [[poster](https://liuhaumin.github.io/LeadsheetArrangement/pdf/GTC_poster_HaoMin.pdf)]
 
 ## Usage
-### Step 1: adjust training or testing modes in main.py
+### Step 0: preprocessing the midi data
+1. Go to folder (./data/preprocessing/)
+2. Put your input song_name.midi file in folder (./data/preprocessing/mysong_mid_C/)
+    * Note that song_name.midi should be in C key and two tracks(melody and chord)
+3. Back to folder (./preprocessing/)
+4. Run pianoroll_mysong.ipynb
+    * Remember to change filenames in code lines into "song_name"
+    * Output files will be stored in folder(./data/chord_roll/val/)with name as "x_bar_chroma_song_name.npy" and "y_bar_chroma_song_name.npy"
+
+### Step 1: Loading the data
+1. Open file store_sa.py
+2. Turn filename in code line # 36 into your filename, i.e. ('y_bar_chroma_song_name.npy')
+3. Load the data by running store_sa.py
+
+### Step 2: adjust training or testing modes in main.py
 ```python
 import tensorflow as tf
 from musegan.core import MuseGAN
@@ -71,5 +85,16 @@ with tf.Session() as sess:
     musegan.gen_test(input_data, is_eval=True)
 
 ```
-### Step 2: run store_sa.py
 ### Step 3: run main.py
+1. Training mode
+   * Checkpoints are stored in folder (./exps/nowbar_hybrid/checkpoint/)
+2. Testing mode
+   * the output files are stored in folder (./exps/nowbar_hybrid/gen/)
+   
+### Step 4: postprocessing the output midi
+1. Go to folder (./postprocessing/)
+2. Run file npy2mid.ipynb
+   * Remember to change filenames in code lines into "song_name"
+   * Output files are stored in folder (./exps/nowbar_hybrid/gen_4bar/)
+
+
