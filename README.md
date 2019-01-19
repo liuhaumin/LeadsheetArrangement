@@ -34,7 +34,7 @@ in *GPU Technology Conference* (GTC), 2018.
 3. Back to root directory and run __scripts.py__
 4. Find the outputs in folder (./output/)
 
-### Approach 2: training or testing the model step by step by your own
+### Approach 2: Train or test the model step by step by your own
 #### Step 0: preprocessing the midi data
 1. Go to folder (./data/preprocessing/)
 2. Put your input song_name.midi file in folder (./data/preprocessing/mysong_mid_C/)
