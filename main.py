@@ -17,40 +17,49 @@ from config import *
 #assign GPU
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    """ Create TensorFlow Session """
-    with tf.Session() as sess:
-        
-    # === Prerequisites ===
-    # Step 1 - Initialize the training configuration        
-        t_config = TrainingConfig
-        t_config.exp_name = 'exps/nowbar_hybrid'        
+""" Create TensorFlow Session """
+
+t_config = TrainingConfig
+
+os.environ['CUDA_VISIBLE_DEVICES'] = t_config.gpu_num
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+
+with tf.Session(config=config) as sess:
     
-    # Step 2 - Select the desired model
-        model = NowbarHybrid(NowBarHybridConfig)
-        
-    # Step 3 - Initialize the input data object
-        input_data = InputDataNowBarHybrid(model)
-        
-    # Step 4 - Load training data
-        path_x_train_bar = 'tra_X_bars'
-        path_y_train_bar = 'tra_y_bars'
-        input_data.add_data_sa(path_x_train_bar, path_y_train_bar, 'train') # x: input, y: conditional feature
-        
-    # Step 5 - Initialize a museGAN object
-        musegan = MuseGAN(sess, t_config, model)
-        
-    # === Training ===
-        musegan.train(input_data)
+# === Prerequisites ===
+# Step 1 - Initialize the training configuration        
+    t_config = TrainingConfig
+    t_config.exp_name = 'exps/nowbar_hybrid'        
+
+# Step 2 - Select the desired model
+    model = NowbarHybrid(NowBarHybridConfig)
     
-    # === Load a Pretrained Model ===
-        musegan.load(musegan.dir_ckpt)
+# Step 3 - Initialize the input data object
+    input_data = InputDataNowBarHybrid(model)
     
-    # === Generate Samples ===
-        path_x_test_bar = 'val_X_bars'
-        path_y_test_bar = 'val_y_bars'
-        input_data.add_data_sa(path_x_test_bar, path_y_test_bar, key='test')
-        musegan.gen_test(input_data, is_eval=True)
+# Step 4 - Load training data
+    path_x_train_bar = 'tra_X_bars'
+    path_y_train_bar = 'tra_y_bars'
+    input_data.add_data_sa(path_x_train_bar, path_y_train_bar, 'train') # x: input, y: conditional feature
+    
+# Step 5 - Initialize a museGAN object
+    musegan = MuseGAN(sess, t_config, model)
+    
+# === Training ===
+    # musegan.train(input_data)
+
+# === Load a Pretrained Model ===
+    musegan.load(musegan.dir_ckpt)
+
+# === Generate Samples ===
+    path_x_test_bar = 'val_X_bars'
+    path_y_test_bar = 'val_y_bars'
+    input_data.add_data_sa(path_x_test_bar, path_y_test_bar, key='test')
+    print('--------------Start arrangement generation !!--------------')
+    musegan.gen_test(input_data, is_eval=True)
+    print('--------------arrangement completed !!--------------')
 
 
