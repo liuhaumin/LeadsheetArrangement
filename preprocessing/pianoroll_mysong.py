@@ -34,23 +34,20 @@ from madmom.features.chords import DeepChromaChordRecognitionProcessor
 #     .mid to .npy .             #
 ##################################
 # Create a `pypianoroll.Multitrack` instance
-multitrack = Multitrack(filepath='./mysong_mid_C/8bar_vae.mid', tempo=120.0, beat_resolution=12)
-
-
-# Plot the multi-track piano-roll
-# fig, axs = multitrack.plot()
-# plt.show()
+print('----------------Start data preprocessing !!-------------------')
+multitrack = Multitrack(filepath='./data/preprocessing/mysong_mid_C/test.mid', tempo=120.0, beat_resolution=12)
 
 # save pypianoroll
-pr.save('./mysong_npy_C/8bar_vae.npz', multitrack, compressed=True)
-#pr.save('./mysong_npy_C/Amazing_Grace.npy', multitrack, compressed=False)
-data = pr.load('./mysong_npy_C/8bar_vae.npz')
+pr.save('./data/preprocessing/mysong_npy_C/test.npz', multitrack, compressed=True)
+
+data = pr.load('./data/preprocessing/mysong_npy_C/test.npz')
 data_tracks = data.get_stacked_pianorolls()
 data_bool = data_tracks.astype(bool)
-np.save('./mysong_npy_C/8bar_vae.npy',data_bool)
 
-data_npy_C = np.load('./mysong_npy_C/8bar_vae.npy')
-print(np.shape(data_npy_C)) #(3072, 128, 2)
+np.save('./data/preprocessing/mysong_npy_C/test.npy',data_bool)
+data_npy_C = np.load('./data/preprocessing/mysong_npy_C/test.npy')
+
+# print(np.shape(data_npy_C)) #(3072, 128, 2)
 
 ##################################
 #     .mid to .wav .             #
@@ -59,13 +56,12 @@ print(np.shape(data_npy_C)) #(3072, 128, 2)
 # from midi2audio import FluidSynth
 # from IPython.display import display, Image, Audio
 fs = FluidSynth('/usr/share/sounds/sf2/FluidR3_GM.sf2') # arch
-fs.midi_to_audio('./mysong_mid_C/'+'8bar_vae.mid', './mysong_wav_C/8bar_vae'+'.wav')
-
+fs.midi_to_audio('./data/preprocessing/mysong_mid_C/'+'test.mid', './data/preprocessing/mysong_wav_C/test'+'.wav')
 
 #################################
 #  chord extraction by Madmom   #
 #################################
-length = 3072 # this is for 8bar_vae 
+length = np.shape(data_npy_C)[0] # this is for test.npy 
 
 N_bar = length/48.0
 N_beat = N_bar *4.0
@@ -136,7 +132,7 @@ for i in range(len(names)):
 
 dcp = DeepChromaProcessor()
 decode = DeepChromaChordRecognitionProcessor()
-data_npy_C = np.load('./mysong_npy_C/8bar_vae.npy')
+data_npy_C = np.load('./data/preprocessing/mysong_npy_C/test.npy')
 data_npy_C = np.reshape(data_npy_C,(1,length,128,2))
 gen = np.zeros((1, length, 84, 3), dtype=bool)
 gen[:,:,:,0:2] = data_npy_C[:,:,24:108,:]
@@ -144,9 +140,9 @@ gen[:,:,:,0:2] = data_npy_C[:,:,24:108,:]
 gen_list = []
 num = 0 # valid num
 for i in range(0,1):
-    print(i)
+    # print(i)
     try:    
-        chroma = dcp('./mysong_wav_C/8bar_vae.wav')
+        chroma = dcp('./data/preprocessing/mysong_wav_C/test.wav')
         cho = decode(chroma)
     except Exception as e:
         print(e)
@@ -191,14 +187,25 @@ for i in range(0,1):
                 gen[i,12*t:12*(t+1),chord,2] = [True]*12
     
     gen_list.append(gen[i])
-    print(np.shape(gen_list))
+    # print(np.shape(gen_list))
     num += 1
     
-np.save('./mysong_npy_C/8bar_vae_madmom.npy',gen_list)
-print('data_save')
+np.save('./data/preprocessing/mysong_npy_C/test_madmom.npy',gen_list)
+# print('data_save')
 
-# for 8bar_vae
-data = np.load('./mysong_npy_C/8bar_vae_madmom.npy')
-data = np.reshape(data,(-1,48,84,3)) # 2 tracks + madmom chord track
-np.save('../musegan_lpd/data/chord_sequence/val/x_bar_chroma_8bar_vae.npy',data[:,:,:,0:2])
-np.save('../musegan_lpd/data/chord_sequence/val/y_bar_chroma_8bar_vae.npy',data[:,:,:,2:])
+# for tet
+data = np.load('./data/preprocessing/mysong_npy_C/test_madmom.npy')
+l = np.shape(data)[1]
+# print(l)
+data_new = np.zeros((3072,84,3),dtype=bool)
+i = 0
+while i < len(data_new):
+    data_new[i:i+l] = data
+    i = i + l
+    # plt.plot(data_new[:,:,2])
+
+data_new = np.reshape(data_new,(-1,48,84,3)) # 2 tracks + madmom chord track
+# print('data_new',np.shape(data_new))
+np.save('./data/chord_roll/val/x_bar_chroma_test.npy',data_new[:,:,:,0:2])
+np.save('./data/chord_roll/val/y_bar_chroma_test.npy',data_new[:,:,:,2:])
+print("--------------data preprocessing completed !!-----------------")
