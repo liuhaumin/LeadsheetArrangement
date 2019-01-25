@@ -244,10 +244,10 @@ class BarDiscriminator(object):
     
     
                 ## linear
-                h6 = concat_prev(h5, nowbar[5] if nowbar else None)
-                h6 = tf.reshape(h6, [-1, np.product([s.value for s in h5.get_shape()[1:]])])
-                h6 = lrelu(linear(h6, 1024, name='h6'))
-                h7 = linear(h6, 1, name='h7')
+                h6 = concat_prev(h5, nowbar[5] if nowbar else None) # (64, 1, 12, 528)
+                h6 = tf.reshape(h6, [-1, np.product([s.value for s in h6.get_shape()[1:]])]) # (64, 12*528)
+                h6 = lrelu(linear(h6, 1024, name='h6')) #(64, 1024)
+                h7 = linear(h6, 1, name='h7') # (64, 1)
             return h5, h7
 
         if type_ is 2: # chroma vector 4
