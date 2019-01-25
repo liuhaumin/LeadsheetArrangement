@@ -45,10 +45,10 @@ class InputData:
 
     def gen_feed_dict(self, idx=0, data_size=None, key='train', z=None):
         batch_size = self.batch_size if data_size is None else data_size
-        feed_dict = self.gen_z_dict(data_size=data_size, z=z)
+        feed_dict = self.gen_z_dict(data_size=batch_size, z=z)
 
         if key is not None:
-            x,y = self.get_batch(idx, data_size, key)
+            x,y = self.get_batch(idx, batch_size, key)
             feed_dict[self.model.x] = x
             feed_dict[self.model.y] = y
 
@@ -72,7 +72,7 @@ class InputDataMNIST(InputData):
     def gen_feed_dict(self, idx=0, data_size=None, key='train'):
         batch_size = self.batch_size if data_size is None else data_size
         z = np.random.uniform(-1., 1., size=(self.batch_size, self.model.z_dim)).astype(np.float32)
-        x = self.get_batch(idx, data_size, key)
+        x = self.get_batch(idx, batch_size, key)
 
         feed_dict = {self.model.z: z, self.model.x: x}
 
